@@ -16,7 +16,7 @@ runs:
   using: composite
   steps:
     - name: Generate sha and ref 
-      uses: docker://public.ecr.aws/l7o7z1g8/actions/assets-plugin-chain-utils:d14621a0e281098b736a3d21cc92edd1fdc8b504
+      uses: docker://public.ecr.aws/l7o7z1g8/actions/assets-plugin-chain-utils:f725443f3373e3939a1e0258f994fe6a46cf76dc
       with:
         entrypoint: assets-plugin-chain-utils
         args: get-commit-info
@@ -47,7 +47,7 @@ runs:
       run: /app/plugin-checkov -mode single
 
     - name: Complete execution plan
-      uses: docker://public.ecr.aws/l7o7z1g8/actions/assets-plugin-chain-utils:d14621a0e281098b736a3d21cc92edd1fdc8b504
+      uses: docker://public.ecr.aws/l7o7z1g8/actions/assets-plugin-chain-utils:f725443f3373e3939a1e0258f994fe6a46cf76dc
       id: process-outputs
       with:
           entrypoint: assets-plugin-chain-utils
